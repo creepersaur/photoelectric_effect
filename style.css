@@ -1,0 +1,74 @@
+body {
+	font-family: Georgia, serif;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 16px;
+	background: #f5f7fa;
+	color: #1a1f2b;
+}
+
+h1 {
+	margin-bottom: 8px;
+}
+
+canvas {
+	display: block;
+	width: 100%;
+	background: #10141f;
+	border-radius: 6px;
+}
+
+#status {
+	font-weight: bold;
+	min-height: 1.4em;
+	color: red;
+}
+
+#status.emitting {
+	color: green;
+}
+
+.layout {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.panel {
+	flex: 1 1 300px;
+	background: white;
+	border: 1px solid #c9d1dc;
+	border-radius: 6px;
+	padding: 12px 16px;
+}
+
+label {
+	display: block;
+	margin-top: 12px;
+}
+
+input[type=range],
+select {
+	width: 100%;
+}
+
+small {
+	color: #555;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 6px 4px;
+	border-bottom: 1px solid #e3e7ee;
+}
+
+td:last-child {
+	text-align: right;
+	font-weight: bold;
+}
+
+

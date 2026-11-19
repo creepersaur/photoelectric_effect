@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photoelectric Effect Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Photoelectric Effect Simulation</h1>
+
+  <!-- Part 1: the animation -->
+  <canvas id="lab" width="1280" height="600"></canvas>
+  <p id="status"></p>
+
+  <label>Simulation speed: <b id="simSpeedText"></b></label>
+  <input type="range" id="simSpeed" min="0" max="100" step="1" value="50">
+
+  <div class="layout">
+    <!-- Part 2: the controls -->
+    <section class="panel">
+      <h2>Controls</h2>
+
+      <label>Frequency: <b id="freqText"></b></label>
+      <input type="range" id="freq" min="3" max="20" step="0.1" value="10">
+      <small id="lightType"></small>
+
+      <label>Intensity: <b id="intText"></b></label>
+      <input type="range" id="intensity" min="0" max="100" step="1" value="50">
+
+      <label>Work function: <b id="wfText"></b></label>
+      <input type="range" id="wf" min="1.5" max="6.5" step="0.05" value="2.3">
+
+      <label>Or pick a metal:</label>
+      <select id="metal">
+        <option value="">Custom</option>
+        <option value="2.1">Caesium (2.1 eV)</option>
+        <option value="2.3" selected>Sodium (2.3 eV)</option>
+        <option value="4.3">Zinc (4.3 eV)</option>
+        <option value="4.7">Copper (4.7 eV)</option>
+        <option value="5.65">Platinum (5.65 eV)</option>
+      </select>
+    </section>
+
+    <!-- Part 3: the results -->
+    <section class="panel">
+      <h2>Results</h2>
+      <table>
+        <tr><td>Photon energy (E = hf)</td><td id="outE"></td></tr>
+        <tr><td>Threshold frequency (f₀ = φ/h)</td><td id="outF0"></td></tr>
+        <tr><td>Max kinetic energy (E − φ)</td><td id="outKE"></td></tr>
+        <tr><td>Stopping potential (V₀ = KE/e)</td><td id="outV0"></td></tr>
+        <tr><td>Photocurrent (relative)</td><td id="outI"></td></tr>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
